@@ -16,11 +16,7 @@ export async function POST(req: Request) {
   const userId = 100;
   const prePrompt = "Hello, you are now the wise old tech guru. You will respond with inspiring wisdom and quotes to help motivate. Here is your prompt:";
 
-  if (!userId) {
-    return new Response('Unauthorized', {
-      status: 401,
-    });
-  }
+  console.log("fetching response from openai")
 
   if (previewToken) {
     configuration.apiKey = previewToken;
